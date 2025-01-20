@@ -3,7 +3,7 @@
 from constant import MENUS, getMenu
 import calculation
 
-def menus():
+def showMenu():
     print("%d. %s" % (getMenu("PLUS", "value"), getMenu("PLUS", "name")))
     print("%d. %s" % (getMenu("MINUS", "value"), getMenu("MINUS", "name")))
     print("%d. %s" % (getMenu("KALI", "value"), getMenu("KALI", "name")))
@@ -43,12 +43,33 @@ def getResult(choice) -> str:
     
     return "Pilihan tidak valid!"
 
+def thanksMessage():
+    print("Terima kasih ^_^")
+
 def main():
-    print("--- Calculator Sederhana ---")
-    menus()
-    value = getMenuInput()
-    result = getResult(value)
-    print("\nHasil: \n" + result)
+    
+    while True:
+        try:
+            print("\n--- Calculator Sederhana ---")
+            showMenu()
+            value = getMenuInput()
+            result = getResult(value)
+        
+            print("\nHasil: \n" + result)
+            
+            continue_prompt = input("\nAnda ingin melanjutkan lagi? (N/0 untuk berhenti): ").strip().lower()
+            
+            if(continue_prompt == "n" or continue_prompt == "0"):
+                print("\n")
+                thanksMessage()
+                print("Sampai jumpa lagi!!")
+                break
+        except KeyboardInterrupt as e:
+            print("\n")
+            thanksMessage()
+            print("Well done!!")
+            break
+        
     
     
 if __name__ == "__main__":
