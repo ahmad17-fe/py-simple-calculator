@@ -6,8 +6,8 @@ import calculation
 def showMenu():
     print("%d. %s" % (getMenu("PLUS", "value"), getMenu("PLUS", "name")))
     print("%d. %s" % (getMenu("MINUS", "value"), getMenu("MINUS", "name")))
-    print("%d. %s" % (getMenu("KALI", "value"), getMenu("KALI", "name")))
-    print("%d. %s" % (getMenu("BAGI", "value"), getMenu("BAGI", "name")))
+    print("%d. %s" % (getMenu("MULTIPLY", "value"), getMenu("MULTIPLY", "name")))
+    print("%d. %s" % (getMenu("DIVIDE", "value"), getMenu("DIVIDE", "name")))
     print("%d. %s" % (getMenu("MODULUS", "value"), getMenu("MODULUS", "name")))
 
 def getMenuInput() -> str:
@@ -31,8 +31,8 @@ def getResult(choice) -> str:
     operations = {
         getMenu("PLUS", "value"): calculation.plus,
         getMenu("MINUS", "value"): calculation.minus,
-        getMenu("KALI", "value"): calculation.multiply,
-        getMenu("BAGI", "value"): calculation.divide,
+        getMenu("MULTIPLY", "value"): calculation.multiply,
+        getMenu("DIVIDE", "value"): calculation.divide,
         getMenu("MODULUS", "value"): calculation.modulus,
     }
     

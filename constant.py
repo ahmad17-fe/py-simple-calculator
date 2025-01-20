@@ -7,11 +7,11 @@ MENUS = {
         "value": 2,
         "name": "Kurang"     
     },
-    "KALI": {
+    "MULTIPLY": {
         "value": 3,
         "name": "Kali"
     },
-    "BAGI": {
+    "DIVIDE": {
         "value": 4,
         "name": "Bagi"     
     },
